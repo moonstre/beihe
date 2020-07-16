@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="grid_expected_size">120dp</dimen>
+
+    <integer name="home_title_item_count">6</integer>
+    <dimen name="home_title_margin_left">0dp</dimen>
+    <dimen name="home_title_margin_right">0dp</dimen>
+
+</resources>

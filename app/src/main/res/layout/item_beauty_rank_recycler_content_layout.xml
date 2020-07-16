@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp">
+
+        <TextView
+            android:id="@+id/number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black_353553"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/head_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/number_tv"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:id="@+id/info_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/head_iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nick_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:textColor="@color/black_333333"
+                android:textSize="15sp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:id="@+id/earn_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:textColor="@color/gray_868686"
+                    android:textSize="12sp" />
+
+                <FrameLayout
+                    android:id="@+id/status_fl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/offline_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shape_focus_status_new_back"
+                        android:drawableStart="@drawable/shape_offline_new_indicator"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/offline"
+                        android:textColor="@color/black_aaaaaa"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/online_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shape_focus_status_new_back_2"
+                        android:drawableStart="@drawable/shape_online_new_indicator"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/free"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/busy_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shape_focus_status_new_back"
+                        android:drawableStart="@drawable/shape_busy_one_indicator"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/busy"
+                        android:textColor="@color/black_aaaaaa"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/point_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:contentDescription="@null"
+            android:padding="5dp"
+            android:src="@drawable/point" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/HorizontalDivideLine"
+        android:layout_marginStart="18dp" />
+
+</LinearLayout>

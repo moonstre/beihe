@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/itme_lin"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/item_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/itme_nick"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/itme_headimage"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="8dp"
+                android:layout_above="@+id/itme_nick"
+                android:background="@drawable/default_head_img"/>
+            <TextView
+                android:id="@+id/itme_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/itme_title"
+                android:textColor="@color/violet_ba30f2"
+                android:textSize="15sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="7dp"
+                android:text="涉及到拉数据大数据的"
+                />
+
+            <ImageView
+                android:id="@+id/itme_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/itme_title"
+                android:layout_marginLeft="6dp"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/itme_nick"
+                android:background="@drawable/male_blue" />
+            <TextView
+                android:id="@+id/itme_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:text="涉及到拉数据大数据的"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/white_location"/>
+                <TextView
+                    android:id="@+id/itme_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="22km"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+</LinearLayout>

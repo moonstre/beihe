@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+
+        <RelativeLayout
+            android:id="@+id/MyEstablish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_gray_round">
+
+            <TextView
+                android:id="@+id/MyEstablish_State"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_999999"
+                android:textSize="13sp"
+                android:layout_marginLeft="12dp"
+                android:text="进行中"
+                android:layout_marginTop="8dp"/>
+            <TextView
+            android:id="@+id/MyEstablish_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/my_activity_item_color"
+            android:textSize="14sp"
+            android:layout_marginLeft="12dp"
+            android:text="进行中"
+            android:layout_below="@+id/MyEstablish_State"
+            android:layout_marginTop="7dp"/>
+            <TextView
+                android:id="@+id/MyEstablish_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_666666"
+                android:textSize="13sp"
+                android:layout_marginLeft="12dp"
+                android:text="进行中"
+                android:layout_below="@+id/MyEstablish_Title"
+                android:layout_marginBottom="9dp"
+                android:layout_marginTop="3dp"/>
+        </RelativeLayout>
+
+
+</RelativeLayout>

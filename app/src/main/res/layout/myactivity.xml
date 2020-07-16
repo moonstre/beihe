@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    
+    <RelativeLayout
+        android:id="@+id/MyActivity_Top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/MyActivity_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/icon_arrow_black"/>
+        <com.yiliao.chat.view.ViewPagerIndicator
+            android:id="@+id/indicator"
+            android:layout_width="176dp"
+            android:layout_height="match_parent"
+            app:bold="true"
+            android:gravity="center"
+            app:change_size="true"
+            android:layout_centerInParent="true"
+            app:currentItem="1"
+            app:indicatorColor="@color/black_333333"
+            app:indicatorHeight="3dp"
+            app:indicatorWidth="12dp"
+            app:lightColor="@color/black_333333"
+            app:normalColor="@color/gray_666666"
+            app:title_textSize="16sp"
+            app:visibleItemCount="2" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_f1f1f1"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/MyActivity_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/MyActivity_Top"/>
+
+    <ImageView
+        android:id="@+id/MyActivity_Establish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/faqihuodong"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>

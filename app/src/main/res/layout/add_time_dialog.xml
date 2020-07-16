@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/close_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:text="@string/chose_add_time"
+        android:textSize="18sp"
+        android:padding="7dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/content_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_weight="0.5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/jinbi_num"
+            />
+        <TextView
+            android:layout_weight="7"
+            android:id="@+id/gold_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="6464648"
+            android:textSize="16sp"
+            />
+            <TextView
+                android:id="@+id/go_to_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/go_to_pay"
+                android:textSize="16sp"
+                android:textColor="#7275FF"
+                />
+
+    </LinearLayout>
+
+    <TextView
+        android:background="#7275FF"
+        android:id="@+id/to_to_pay_suss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:text="@string/to_to_pay_suss"
+        android:textSize="18sp"
+        android:padding="7dp"
+        />
+
+</LinearLayout>

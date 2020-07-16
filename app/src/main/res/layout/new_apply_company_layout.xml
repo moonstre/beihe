@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--申请人姓名-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/apply_name_des"
+                android:textColor="@color/black_464646"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/apply_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="92dp"
+                android:background="@drawable/shape_apply_text_background"
+                android:hint="@string/please_input_apply_name"
+                android:paddingBottom="7dp"
+                android:paddingEnd="2dp"
+                android:paddingStart="23dp"
+                android:paddingTop="7dp"
+                android:textColor="@color/black_text"
+                android:textColorHint="@color/gray_bfbfbf"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+        <!--联系方式-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/contact_way_des"
+                android:textColor="@color/black_464646"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/contact_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="92dp"
+                android:background="@drawable/shape_apply_text_background"
+                android:hint="@string/please_input_apply_contact"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingBottom="7dp"
+                android:paddingEnd="2dp"
+                android:paddingStart="23dp"
+                android:paddingTop="7dp"
+                android:textColor="@color/black_text"
+                android:textColorHint="@color/gray_bfbfbf"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <!--工会名称-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/company_name_des"
+                android:textColor="@color/black_464646"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/company_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="92dp"
+                android:background="@drawable/shape_apply_text_background"
+                android:hint="@string/please_input_company_name"
+                android:paddingBottom="7dp"
+                android:paddingEnd="2dp"
+                android:paddingStart="23dp"
+                android:paddingTop="7dp"
+                android:textColor="@color/black_text"
+                android:textColorHint="@color/gray_bfbfbf"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+
+        <!--主播人数-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/apply_count_des"
+                android:textColor="@color/black_464646"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="92dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/apply_count_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_apply_text_background"
+                    android:hint="@string/please_input_apply_count"
+                    android:inputType="number"
+                    android:paddingBottom="7dp"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="23dp"
+                    android:paddingTop="7dp"
+                    android:textColor="@color/black_text"
+                    android:textColorHint="@color/gray_bfbfbf"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notice_one"
+                        android:textColor="@color/gray_4f4f4f"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="@string/notice_two"
+                        android:textColor="@color/gray_4f4f4f"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/agree_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:src="@drawable/selector_agree_checked_background" />
+
+            <TextView
+                android:id="@+id/agree_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:text=""
+                android:textColor="@color/gray_666666"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/share_now_tv"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/yuan_gree_save"
+            android:gravity="center"
+            android:text="@string/confirm_apply"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</ScrollView>

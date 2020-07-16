@@ -1,0 +1,32 @@
+package com.yiliao.chat.view;
+
+import android.content.Context;
+import android.support.annotation.Nullable;
+import android.util.AttributeSet;
+import android.widget.RelativeLayout;
+
+/**
+ * 正文形大小布局
+ */
+public class SquareRelativeLayout extends RelativeLayout {
+
+    public SquareRelativeLayout(Context context) {
+        this(context, null);
+    }
+
+    public SquareRelativeLayout(Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public SquareRelativeLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int widthSize = MeasureSpec.getSize(widthMeasureSpec);
+        heightMeasureSpec = MeasureSpec.makeMeasureSpec(widthSize, MeasureSpec.EXACTLY);
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+}

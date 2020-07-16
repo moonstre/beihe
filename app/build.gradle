@@ -1,0 +1,260 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+
+def keystorePropertiesFile = rootProject.file("/app/sign/keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 27
+        multiDexEnabled true// dex突破65535的限制
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "default"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a"
+        }
+
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            v2SigningEnabled true
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+
+
+    }
+
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'//忽略 Google Search（放于每个module的build.gradle文件中）
+    }
+
+    buildTypes {
+        release {
+//            minifyEnabled true//混淆
+//            shrinkResources true //删除无效引用
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            buildConfigField "String", "rkey", "\"${AppKey}\""
+            buildConfigField "String", "charset", "\"UTF-8\""
+            resValue "string", "app_name", "@string/app_name_release"
+
+        }
+        debug {
+            signingConfig signingConfigs.release
+
+            buildConfigField "String", "rkey", "\"${AppKey}\""
+            buildConfigField "String", "charset", "\"UTF-8\""
+            resValue "string", "app_name", "@string/app_name_release"
+//            buildConfigField "String", "socketIp", "\"47.108.89.47\""
+//            buildConfigField "String", "hostAddress", "\"http://api.hbfd1.cn/\""
+//            buildConfigField "String", "hostAddress", "\"http://api.fdsq3.cn/\""
+        }
+
+
+    }
+
+    productFlavors {
+        meirenyu {
+            buildConfigField "String", "CHANNEL", "\"meirenyu\""
+            applicationId "com.tctd.xyca"
+            versionCode 4
+            versionName "1.0.4"
+            buildConfigField "int", "socketPort", "12580"
+            buildConfigField "String", "socketIp", "\"47.108.114.233\""
+            buildConfigField "String", "hostAddress", "\"http://bhapi.hnfd1.cn/\""
+//            buildConfigField "String", "hostAddress", "\"http://api.fdsq3.cn/\""
+            buildConfigField "String", "fileprovider", "\"com.tctd.ydyfda.fileProvider\""
+            buildConfigField "String", "connectChannel", "\"com.tctd.ydyfda\""
+            buildConfigField 'int', 'beautySDK', '2'
+            //极光
+            buildConfigField 'String', "jpushAppKey", "\"e6925452332c88f607a96a81\""
+            //腾讯云
+            buildConfigField 'String', "tencentCloudAppId", "\"1258660026\""
+            buildConfigField 'String', "tencentCloudSecretId", "\"AKIDXo0B9s2ltlOs9BdDtJTQKzvBHFK9YJ2i\""
+            buildConfigField 'String', "tencentCloudSecretKey", "\"g6GB3h6RUlfR5kCMCetseAVeZeU3RaXE\""
+            buildConfigField 'String', "tencentCloudRegion", "\"Shanghai\""//Constant文件中进行判断
+            buildConfigField 'String', "tencentCloudBucket", "\"fendie-1258660026\""
+            //三体云
+            buildConfigField 'String', "tttAppId", "\"15dc50c0efced12aacc717045fa06834\""
+            buildConfigField 'String', "tttPushAddress", "\"rtmp://santipull.hbfd1.cn/live/\""
+            //微信支付
+            buildConfigField 'String', "wechatAppId", "\"wx0bfe1c70e6e679c8\""
+
+            manifestPlaceholders = [
+                    fileprovider      : "com.tctd.xyca.fileProvider",
+                    JPUSH_PKGNAME     : applicationId,
+                    JPUSH_APPKEY      : "e6925452332c88f607a96a81", //JPush上注册的包名对应的appkey.
+                    JPUSH_CHANNEL     : "developer-default", //暂时填写默认值即可.
+                    JPush             : "com.tctd.xyca",//极光推送
+                    GaoDe_APPKEY      : "a3f5e002ddb0fde4f34684494d36c8cb",//高德地图
+                    BUGLY_APP_CHANNEL : "com.tctd.xyca",//腾讯bugly
+                    BUGLY_APPID       : "6d1f0765fe",//腾讯bugly APPid
+                    OPEENINSTALL_APPID: "lhd92g"////openinstall APPid
+            ]
+        }
+
+    }
+
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.all {
+//            outputFileName = "apk_" + variant.flavorName + "_${releaseTime()}.apk"
+//        }
+//    }
+}
+
+def static releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+MobSDK {
+    appKey "2df4fe961203c"
+    appSecret "83fce45b8b5a9e2a90948b164a3d290b"
+    gui false
+
+    ShareSDK {
+        devInfo {
+            QQ {
+                appId "101844824"
+                appKey "bcc98b966609eaf783ade0ff30540598"
+                shareByAppClient true
+            }
+            QZone {
+                appId "101686306"
+                appKey "aa3e4d7e6e7becb0782b391af056593b"
+                shareByAppClient true
+            }
+            Wechat {
+                appId "wx0bfe1c70e6e679c8"
+                appSecret "a9880c5b0995e67d26eda86224d1d41f"
+            }
+            WechatMoments {
+                appId "wx0bfe1c70e6e679c8"
+                appSecret "a9880c5b0995e67d26eda86224d1d41f"
+            }
+            Facebook {
+                appKey ""
+                appSecret ""
+                callbackUri "https://mob.com"
+            }
+        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    //google multi dex
+    implementation 'com.android.support:multidex:1.0.3'
+    //注解butter knife
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    //沉浸式状态栏
+    implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //glide 高斯模糊
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+    //fastJson
+    implementation 'com.alibaba:fastjson:1.2.34'
+    //recycler view
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    //zhy ok http utils
+    implementation 'com.zhy:okhttputils:2.6.2'
+    //1.1.0 API改动过大，老用户升级需谨慎
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-7'
+    //没有使用特殊Header，可以不加这行
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-7'
+    //知乎图片选择
+    implementation 'com.zhihu.android:matisse:0.5.1'
+    //LuBan图片压缩
+    implementation 'top.zibin:Luban:1.1.7'
+    //u corp裁剪
+    api('com.github.yalantis:ucrop:2.2.2') {
+        exclude group: 'com.android.support'
+    }
+    //腾讯云
+    implementation files('libs/cos-android-sdk-5.4.6.jar')
+    //支付宝支付
+    implementation(name: 'alipaySdk-15.6.4-20190611174359-noUtdid', ext: 'aar')
+    //Mina
+    implementation files('libs/mina-core-2.0.16.jar')
+    //PhotoView 查看图片
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    //极光推送
+    implementation 'cn.jiguang.sdk:jpush:3.3.4'
+    //极光IM
+    implementation 'cn.jiguang.sdk:jmessage:2.9.0'
+    implementation 'cn.jiguang.sdk:jcore:2.0.0'
+    //EventBus，极光已不向外暴露EventBus，如需使用的话，要自己单独集成
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //悬浮窗权限
+    implementation 'com.github.czy1121:settingscompat:1.1.4'
+    //二维码
+    implementation 'com.google.zxing:core:3.3.0'
+    //三体云
+    implementation(name: '3T_Native_SDK_for_Android_V2.1.0_Full(2019_04_02_1)', ext: 'aar')
+    //高德3D地图
+    implementation 'com.amap.api:3dmap:6.5.0'
+    //高德定位
+    implementation 'com.amap.api:location:4.3.0'
+    //高德搜索
+    implementation 'com.amap.api:search:6.5.0.1'
+    //七牛云播放器
+    implementation files('libs/pldroid-player-2.1.5.jar')
+    //cjt自定义可长按录视频camera
+    implementation 'cjt.library.wheel:camera:1.1.9'
+    //Android Material Design
+    implementation 'com.android.support:design:27.1.1'
+    //美颜
+    implementation project(':tiui')
+    //微信开放 - 支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.4'
+    //相芯美颜
+    implementation 'com.faceunity:nama:6.1.0-lite'
+
+    //gif库，播放礼物gif用
+    api 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+
+    //svga 直播礼物动画
+//    api 'com.github.yyued:SVGAPlayer-Android:2.4.0'
+    implementation 'com.github.yyued:SVGAPlayer-Android:2.4.7'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //使用Glide加载图片
+//    api 'com.github.bumptech.glide:glide:4.8.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:3.7.0'
+//    api 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
+//    api 'com.github.SherlockGougou:BigImageViewPager:v4_4.0.2'
+
+
+    api 'com.lzy.net:okgo:3.0.4'
+    //OkGo上传下载扩展库
+    api 'com.lzy.net:okserver:2.0.5'
+
+    //跑马灯
+    implementation 'com.github.385841539:MarqueeView:1.0.0'
+
+    //腾讯bugly
+    api 'com.tencent.bugly:crashreport:2.6.6'
+
+    //OpenInstall
+    api files('libs/OpenInstall_v2.3.0.jar')
+}

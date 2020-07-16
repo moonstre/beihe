@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ActivityDetalis"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ActivityDetalis_BgImage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+             />
+        <RelativeLayout
+            android:id="@+id/ActivityDetalis_Back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_back_white" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/ActivityDetalis_More"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            >
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:background="@drawable/dian_black"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ActivityDetalis_HeadImage"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/top"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="-23dp"
+        android:background="@drawable/default_head_img"
+        />
+
+    <TextView
+        android:id="@+id/ActivityDetalis_Distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ActivityDetalis_HeadImage"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+
+        android:textColor="@color/gray_cccccc"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/ActivityDetalis_Linea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ActivityDetalis_HeadImage"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ActivityDetalis_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/black_333333"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/ActivityDetalis_Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/male_blue" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/ActivityDetalis_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_333333"
+        android:textSize="15sp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/ActivityDetalis_Linea"
+
+        />
+    <TextView
+        android:id="@+id/ActivityDetalis_Content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_333333"
+        android:textSize="14sp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:lineSpacingMultiplier="1.1"
+        android:layout_below="@+id/ActivityDetalis_Title"
+
+        />
+    <LinearLayout
+        android:id="@+id/ActivityDetalis_TimeLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/ActivityDetalis_Content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/activity_time"/>
+        <TextView
+            android:id="@+id/ActivityDetalis_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_555555"
+            android:textSize="13sp"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ActivityDetalis_AddressLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ActivityDetalis_TimeLine"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/activity_loction"/>
+        <TextView
+            android:id="@+id/ActivityDetalis_Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_555555"
+            android:textSize="13sp"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ActivityDetalis_MoneyLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ActivityDetalis_AddressLine"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/activity_money"/>
+        <TextView
+            android:id="@+id/ActivityDetalis_Money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_555555"
+            android:textSize="13sp"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ActivityDetalis_Lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_below="@+id/ActivityDetalis_MoneyLine"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ActivityDetalis_PhoneLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/activity_phone"/>
+            <TextView
+                android:id="@+id/ActivityDetalis_Phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_555555"
+                android:textSize="13sp"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                android:text="1324567487"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ActivityDetalis_WchatLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/activity_wchat"/>
+            <TextView
+                android:id="@+id/ActivityDetalis_Wchat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_555555"
+                android:textSize="13sp"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                android:text="1324567487"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已报名"
+                android:textSize="15sp"
+                android:textColor="@color/black_333333"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="9dp"
+                android:layout_height="64dp"
+                android:background="@mipmap/activity_buton_bg">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ActivityDetalis_ApplyList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toLeftOf="@+id/ActivityDetalis_Right"/>
+
+                <RelativeLayout
+                    android:id="@+id/ActivityDetalis_Right"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp">
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/activity_right_back_withe"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ActivityDetalis_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/activity_button"
+        android:layout_below="@+id/ActivityDetalis_MoneyLine"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="立即报名"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="85dp"
+        />
+</RelativeLayout>

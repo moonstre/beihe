@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/content_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/text_gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login_shadow" />
+
+    <ImageView
+        android:id="@+id/ivLoginLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:background="@mipmap/logo"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@id/phone_tv"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@id/ivLoginLogo"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/shape_scroll_phone_text_back"
+        android:gravity="center"
+        android:text="@string/phone_number_login"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/register_tv"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@id/phone_tv"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/shape_scroll_register_text_back"
+        android:gravity="center"
+        android:text="@string/register"
+        android:textColor="@color/violet_ba30f2"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/register_notice"
+            android:textColor="@color/gray_666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/agree_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/login_agree"
+            android:textColor="@color/violet_d51eff"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layoutBottom"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="never" />
+
+</RelativeLayout>

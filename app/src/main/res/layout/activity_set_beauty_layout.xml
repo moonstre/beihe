@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--大视频-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@id/content_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--退出-->
+    <ImageView
+        android:id="@+id/finish_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="9dp"
+        android:contentDescription="@null"
+        android:padding="6dp"
+        android:src="@drawable/close_round" />
+
+    <!--退出-->
+    <ImageView
+        android:id="@+id/switch_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="9dp"
+        android:contentDescription="@null"
+        android:padding="6dp"
+        android:src="@drawable/switch_white" />
+
+    <TextView
+        android:id="@+id/btnBeautySetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="100dp"
+        android:drawableTop="@mipmap/icon_default_beauty"
+        android:drawablePadding="5dp"
+        android:text="@string/beauty_set"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layoutGroupBeauty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#e6323232"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:visibility="gone">
+
+        <com.yiliao.chat.view.TextSeekBar
+            android:id="@+id/seek_meibai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:progressVal="0"
+            app:text2="@string/beauty_meibai" />
+
+        <com.yiliao.chat.view.TextSeekBar
+            android:id="@+id/seek_mopi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:progressVal="0"
+            app:text2="@string/beauty_mopi" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#BD050F14"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutBeautySeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.yiliao.chat.view.TextSeekBar
+                android:id="@+id/seekBarFuLive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:progressVal="0" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+
+                <HorizontalScrollView
+                    android:id="@+id/skin_beauty_select_block"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:visibility="gone">
+
+                    <com.yiliao.chat.view.BeautyBoxGroup
+                        android:id="@+id/beauty_group_skin_beauty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="horizontal">
+
+                        <com.yiliao.chat.view.BeautyBox
+                            android:id="@+id/beauty_box_skin_detect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:checked_model="open"
+                            app:drawable_close_checked="@mipmap/beauty_skin_control_all_blur_close_checked"
+                            app:drawable_close_normal="@mipmap/beauty_skin_control_all_blur_close_normal"
+                            app:drawable_open_checked="@mipmap/beauty_skin_control_all_blur_open_checked"
+                            app:drawable_open_normal="@mipmap/beauty_skin_control_all_blur_open_normal"
+                            app:text_normal="@string/beauty_box_skin_detect" />
+
+                        <com.yiliao.chat.view.BeautyBox
+                            android:id="@+id/beauty_box_heavy_blur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:checked="true"
+                            app:checked_model="open_double"
+                            app:drawable_close_checked="@mipmap/beauty_skin_control_type_close_checked"
+                            app:drawable_close_normal="@mipmap/beauty_skin_control_type_close_normal"
+                            app:drawable_open_checked="@mipmap/beauty_skin_control_type_open_checked"
+                            app:drawable_open_normal="@mipmap/beauty_skin_control_type_open_normal"
+                            app:text_double="@string/beauty_box_heavy_blur_double"
+                            app:text_normal="@string/beauty_box_heavy_blur_normal" />
+
+                        <com.yiliao.chat.view.BeautyBox
+                            android:id="@+id/beauty_box_blur_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:drawable_close_checked="@mipmap/beauty_skin_control_blur_close_checked"
+                            app:drawable_close_normal="@mipmap/beauty_skin_control_blur_close_normal"
+                            app:drawable_open_checked="@mipmap/beauty_skin_control_blur_open_checked"
+                            app:drawable_open_normal="@mipmap/beauty_skin_control_blur_open_normal"
+                            app:text_normal="@string/beauty_box_blur_level" />
+
+                        <com.yiliao.chat.view.BeautyBox
+                            android:id="@+id/beauty_box_color_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:drawable_close_checked="@mipmap/beauty_skin_control_color_close_checked"
+                            app:drawable_close_normal="@mipmap/beauty_skin_control_color_close_normal"
+                            app:drawable_open_checked="@mipmap/beauty_skin_control_color_open_checked"
+                            app:drawable_open_normal="@mipmap/beauty_skin_control_color_open_normal"
+                            app:text_normal="@string/beauty_box_color_level" />
+
+                        <com.yiliao.chat.view.BeautyBox
+                            android:id="@+id/beauty_box_red_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:drawable_close_checked="@mipmap/beauty_skin_control_red_close_checked"
+                            app:drawable_close_normal="@mipmap/beauty_skin_control_red_close_normal"
+                            app:drawable_open_checked="@mipmap/beauty_skin_control_red_open_checked"
+                            app:drawable_open_normal="@mipmap/beauty_skin_control_red_open_normal"
+                            app:text_normal="@string/beauty_box_red_level" />
+
+                        <com.yiliao.chat.view.BeautyBox
+                            android:id="@+id/beauty_box_eye_bright"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:drawable_close_checked="@mipmap/beauty_skin_control_bright_eyes_close_checked"
+                            app:drawable_close_normal="@mipmap/beauty_skin_control_bright_eyes_close_normal"
+                            app:drawable_open_checked="@mipmap/beauty_skin_control_bright_eyes_open_checked"
+                            app:drawable_open_normal="@mipmap/beauty_skin_control_bright_eyes_open_normal"
+                            app:text_normal="@string/beauty_box_eye_bright" />
+
+                        <com.yiliao.chat.view.BeautyBox
+                            android:id="@+id/beauty_box_tooth_whiten"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:drawable_close_checked="@mipmap/beauty_skin_control_teeth_close_checked"
+                            app:drawable_close_normal="@mipmap/beauty_skin_control_teeth_close_normal"
+                            app:drawable_open_checked="@mipmap/beauty_skin_control_teeth_open_checked"
+                            app:drawable_open_normal="@mipmap/beauty_skin_control_teeth_open_normal"
+                            app:text_normal="@string/beauty_box_tooth_whiten" />
+
+                    </com.yiliao.chat.view.BeautyBoxGroup>
+                </HorizontalScrollView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/filter_recycle_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/beauty_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#33E5E5E5"
+            android:visibility="gone" />
+
+        <com.yiliao.chat.view.CheckGroup
+            android:id="@+id/beauty_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/beauty_radio_skin_beauty"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="美肤"
+                android:textColor="@color/beauty_control_bottom_radio_color"
+                android:textSize="13sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/beauty_radio_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="滤镜"
+                android:textColor="@color/beauty_control_bottom_radio_color"
+                android:textSize="13sp" />
+
+        </com.yiliao.chat.view.CheckGroup>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/to_pay_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="主播开始服务，是否同意?"
+        android:textColor="@color/black_333333"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_f1f1f1"
+        android:visibility="visible" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="拒绝"
+            android:textColor="@color/gray_666666"
+            android:textSize="14sp" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="40dp"
+            android:background="@color/gray_f1f1f1"
+            android:visibility="visible" />
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/btn_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="同意"
+            android:textColor="#7275FF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

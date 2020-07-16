@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--顶部-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <!--排行榜-->
+            <ImageView
+                android:id="@+id/category_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                android:contentDescription="@null"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="7dp"
+                android:paddingBottom="5dp"
+                android:src="@mipmap/search_white" />
+
+            <com.yiliao.chat.view.ViewPagerIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/home_title_margin_right"
+                android:layout_marginBottom="2dp"
+                android:layout_toLeftOf="@+id/category_iv"
+                app:bold="true"
+                app:change_size="true"
+                app:currentItem="1"
+                app:indicatorColor="@color/indicator_color"
+                app:indicatorHeight="3dp"
+                app:indicatorWidth="12dp"
+                app:lightColor="@color/indicator_color"
+                app:normalColor="@color/white"
+                app:title_textSize="16sp"
+                app:visibleItemCount="@integer/home_title_item_count" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

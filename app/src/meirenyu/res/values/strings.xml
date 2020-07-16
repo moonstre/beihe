@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name_release">薰衣草</string>
+    <string name="app_name_debug">薰衣草</string>
+
+    <string name="share_to_earn_money">分享赚钱</string>
+    <string name="active">视频</string>
+    <string name="master">好友</string>
+    <string name="vip">等级</string>
+    <string name="my_one">我的好友</string>
+    <string name="album_new">视频/照片</string>
+    <string name="upload_album">上传视频/照片</string>
+    <string name="with_draw_need_know">提现须知:\n1、每天可以申请提现1次。\n2、当天下午5点前的提现，当天晚上12点左右到账。\n3、请自行到绑定的相应支付宝账户查看到账金额。\n4、关闭了“通过手机号找到我”的支付宝账户当日拒绝提现。</string>
+
+
+    <string name="green_agree">薰衣草绿色直播协议书</string>
+    <string name="warn">薰衣草倡导绿色交友,&#160;严禁低俗,&#160;&#160;色情,&#160;&#160;诱导,&#160;&#160;暴力,&#160;&#160;赌博,\n反动等不良内容,&#160;&#160;一旦涉及将被屏蔽或封停账号,&#160;&#160;网警\n24小时在线巡查,&#160;&#160;敬请配合</string>
+    <string name="agree_detail">薰衣草用户协议</string>
+    <string name="login_agree">《用户协议》</string>
+    <string name="get_actor_title">薰衣草APP招主播啦，无需才艺，轻松赚钱！收入高，提现快！</string>
+    <string name="share_qun_title">薰衣草App【在家赚钱】盛大开业，任性发红包了！先到先得，领完为止！</string>
+    <string name="back_app">返回薰衣草开始认证主播即可领取红包</string>
+    <string name="share_qun_title_one">薰衣草App【在家赚钱】盛大开业，红包大派送,新晋主播最高可领188元！</string>
+    <string name="agree_des">已阅读并同意《薰衣草公会协议书》</string>
+    <string name="not_agree">未同意薰衣草公会协议书</string>
+    <string name="chat_company_agree">薰衣草公会协议书</string>
+    <string name="chat_title">【薰衣草】同城一对一视频交友，附近美女在线陪你私密视频！</string>
+    <string name="vivo_des_four">第四步:&#160;找到薰衣草,右滑将薰衣草设置为启动</string>
+    <string name="vivo_des_six">第七步:&#160;找到薰衣草</string>
+    <string name="meizu_des_two">第四步:&#160;找到薰衣草,右滑打开设置为自启动</string>
+    <string name="meizu_des_four">第七步:&#160;找到薰衣草,右滑将薰衣草设置为保持运行</string>
+    <string name="huawei_des_two">第三步:&#160;进入后找到薰衣草并右滑设置为自动</string>
+    <string name="oppo_des_two">二、没有消息通知或者消息铃声。\n解决办法:允许薰衣草通知!</string>
+    <string name="oppo_des_four">第三步:&#160;找到薰衣草,打开允许按钮</string>
+    <string name="oppo_des_six">第二步:&#160;找到薰衣草</string>
+    <string name="oppo_des_eight">第三步:&#160;找到薰衣草</string>
+    <string name="deal_one">《薰衣草直播管理条例》</string>
+</resources>

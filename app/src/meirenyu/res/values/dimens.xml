@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="home_title_item_count">4</integer>
+    <dimen name="home_title_margin_left">50dp</dimen>
+    <dimen name="home_title_margin_right">50dp</dimen>
+
+</resources>

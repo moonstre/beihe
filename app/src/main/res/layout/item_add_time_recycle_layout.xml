@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="110dp"
+    android:layout_height="80dp"
+    android:id="@+id/dianji_ll"
+    android:gravity="center_horizontal"
+    android:background="@drawable/select_add_time_text_back"
+    android:paddingBottom="10dp"
+    android:layout_marginLeft="5dp"
+    android:paddingTop="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/gold_tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="@color/yuebo_color"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/gold_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/gold_tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

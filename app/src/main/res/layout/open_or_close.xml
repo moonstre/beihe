@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/gray_f5f5f5"
+        android:text="请选择服务内容以及金额(100金币=1元人民币)"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/content_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sure_tv"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/open_go_home_service"
+        android:background="@drawable/yuan_gree_save"/>
+</LinearLayout>
